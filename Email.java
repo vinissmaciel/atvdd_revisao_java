@@ -51,8 +51,10 @@ public class Email {
     }
 
     public boolean existeEmail(String email) {
+        Usuario user = new Usuario();
+        user.setEmail(email);
         for (Usuario u : this.getListaPara()) {
-            if (u.getEmail().equals(email)) {
+            if (u.equals(user)) {
                 return true;
             }
         }
